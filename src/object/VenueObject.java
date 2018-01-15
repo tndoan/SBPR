@@ -20,12 +20,18 @@ public class VenueObject {
         this.factors = new double[k];
         for (int i = 0; i < k; i++)
             this.factors[i] = generator.nextDouble() + 1.0;
+        this.bias = generator.nextDouble() + 1.0;
     }
 
     /**
      * latent factor vector
      */
     private double[] factors;
+
+    /**
+     * bias of venue
+     */
+    private double bias;
 
     public double[] getFactors() {
         return factors;
@@ -62,4 +68,11 @@ public class VenueObject {
         return totalCks;
     }
 
+    public double getBias() {
+        return bias;
+    }
+
+    public void setBias(double bias) {
+        this.bias = bias;
+    }
 }
